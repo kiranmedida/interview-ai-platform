@@ -44,7 +44,7 @@ function Dashboard() {
 
       const response = await axios.post(
 
-        "http://localhost:5000/api/ai/generate",
+        `${import.meta.env.VITE_API_URL}/api/ai/generate`,
 
         formData,
 
@@ -85,7 +85,7 @@ function Dashboard() {
 
       const response = await axios.post(
 
-        "http://localhost:5000/api/ai/evaluate",
+        `${import.meta.env.VITE_API_URL}/api/ai/evaluate`,
 
         {
           question: questions,

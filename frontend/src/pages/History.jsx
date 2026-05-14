@@ -26,7 +26,7 @@ function History() {
 
       const response = await axios.get(
 
-        "http://localhost:5000/api/interview/history",
+        `${import.meta.env.VITE_API_URL}/api/interview/history`,
 
         {
           headers: {
