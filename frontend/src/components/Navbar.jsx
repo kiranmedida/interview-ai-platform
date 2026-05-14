@@ -35,7 +35,7 @@ function Navbar() {
       <div className="flex items-center gap-8">
 
         <Link
-          to="/dashboard"
+          to="/"
           className="
             text-2xl
             font-bold
@@ -51,15 +51,15 @@ function Navbar() {
             <>
 
               <Link
-  to="/"
-  className="
-    text-gray-300
-    hover:text-cyan-400
-    transition
-  "
->
-  Home
-</Link>
+                to="/"
+                className="
+                  text-gray-300
+                  hover:text-cyan-400
+                  transition
+                "
+              >
+                Home
+              </Link>
 
 
               <Link
@@ -72,16 +72,18 @@ function Navbar() {
               >
                 Dashboard
               </Link>
+
+
               <Link
-  to="/history"
-  className="
-    text-gray-300
-    hover:text-cyan-400
-    transition
-  "
->
-  History
-</Link>
+                to="/history"
+                className="
+                  text-gray-300
+                  hover:text-cyan-400
+                  transition
+                "
+              >
+                History
+              </Link>
 
             </>
           )
@@ -91,7 +93,7 @@ function Navbar() {
 
 
       {/* Right Section */}
-      <div>
+      <div className="flex items-center gap-4">
 
         {
           token ? (
@@ -113,20 +115,37 @@ function Navbar() {
 
           ) : (
 
-            <Link
-              to="/login"
-              className="
-                bg-cyan-500
-                hover:bg-cyan-600
-                transition
-                px-5
-                py-2
-                rounded-lg
-                font-medium
-              "
-            >
-              Login
-            </Link>
+            <>
+
+              <Link
+                to="/login"
+                className="
+                  text-gray-300
+                  hover:text-cyan-400
+                  transition
+                  font-medium
+                "
+              >
+                Login
+              </Link>
+
+
+              <Link
+                to="/register"
+                className="
+                  bg-cyan-500
+                  hover:bg-cyan-600
+                  transition
+                  px-5
+                  py-2
+                  rounded-lg
+                  font-medium
+                "
+              >
+                Register
+              </Link>
+
+            </>
           )
         }
 
